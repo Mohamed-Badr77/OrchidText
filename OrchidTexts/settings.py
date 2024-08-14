@@ -130,7 +130,8 @@ STATIC_URL = 'OrchidTexts/static/'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    '*',
+    'https://orchidtext-production.up.railway.app/',
+    'https://orchidtexts.onrender.com/',
 
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
