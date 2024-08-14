@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=jz)z7+q$!u*+9n&r^(lgdo2&2)s+0+$0o@w&)!h=-$$yvy779
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://orchidtexts.onrender.com', 'https://orchidtext-production.up.railway.app']
+ALLOWED_HOSTS = ['https://orchidtexts.onrender.com', 'orchidtext-production.up.railway.app']
 
 
 # Application definition
