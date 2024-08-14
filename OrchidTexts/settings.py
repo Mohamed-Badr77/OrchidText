@@ -128,6 +128,11 @@ STATIC_URL = 'OrchidTexts/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://orchidtexts.onrender.com',
+
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
