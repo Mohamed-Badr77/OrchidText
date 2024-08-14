@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'OrchidTexts.settings')
@@ -16,6 +15,8 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+    port = os.environ.get('PORT', '8000')
+    execute_from_command_line(['manage.py', 'runserver', '0.0.0.0:' + port])
 
 
 if __name__ == '__main__':
