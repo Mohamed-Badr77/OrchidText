@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+  <div class="container">
+      <div class="row">
+
+          <div class="col-lg-10 col-12">
+              <h1>
+                  <span class="d-block text-primary">Orchid</span>
+                  <span class="d-block text-dark">Text</span>
+              </h1>
+          </div>
+      </div>
+  </div>
+</header>
+<br>
+<br>
+<div class= "container">
+          <div class="col-12">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">{{ post.title }}</h3>
+                <div class="mb-1 text-body-secondary">{{ post.date_posted }}</div>
+                <p class="card-text mb-auto"> {{ post.content }} </p>
+                {% if object.author == user or user.is_superuser %}
+                <div>
+                  <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}">Update</a>
+                  <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}">Delete</a>
+                </div>
+                {% endif %}
+                <strong class="d-inline-block mb-2 text-primary-emphasis">By {{ post.author }} </strong>
+              </div>
+            </div>
+            <br>
+            
+            <div class="border-top pt-3">
+              <small class="text-muted">Back to <a href="{% url 'Orchid-Texts' %}">Texts</a></small>
+          </div>
+          <br>
+          <br>
+          </div>
+        </div>
+{% endblock content %}

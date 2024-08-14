@@ -1,0 +1,44 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+  
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">Farewell</span>
+                    <span class="d-block text-dark">Orchid</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+  </header>
+  <br>
+  <br>
+  <div class = "container">
+    <div class="content-section">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log out successful</legend>
+                <h4>You just logged out</h4>
+                <h6> See you soon, with another text.. </h6>
+            </fieldset>
+            <br>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit"><a href="{% url 'login' %}">Login with another account</a></button>
+                <button class="btn btn-outline-info" type="submit"><a href="{% url 'Orchid-Home' %}">Back to Homepage</a></button>
+            </div>
+        </form>
+<!--        <div class="border-top pt-3">-->
+<!--            <small class="text-muted">Do you need an account? <a href="{% url 'register' %}">Register Now</a></small>-->
+<!--        </div>-->
+    </div>
+    <br>
+    <br>
+  </div>
+{% endblock content %}

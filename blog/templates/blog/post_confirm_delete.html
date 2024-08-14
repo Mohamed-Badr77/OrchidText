@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+  
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">Delete</span>
+                    <span class="d-block text-dark">Orchid</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+  </header>
+  <br>
+  <br>
+  <div class=  "container">
+    <div class="content-section">
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+            <h4>Do you really want to delete this post?</h4>
+            <h3 class="mb-0">{{ post.title }}</h3>
+            </fieldset>
+            <br>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Delete</button>
+            </div>
+        </form>
+        <br>
+        <div class="border-top pt-3">
+            <small class="text-muted">Back to <a href="{% url 'Orchid-Home' %}">Homepage</a></small>
+        </div>
+        <br>
+    </div>
+</div>
+{% endblock content %}

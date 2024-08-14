@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+    <!--    <link rel="stylesheet" href="main.css">-->
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <header class="site-header section-padding d-flex justify-content-center align-items-center">
+      <div class="container">
+          <div class="row">
+    
+              <div class="col-lg-10 col-12">
+                  <h1>
+                      <span class="d-block text-primary">Orchid</span>
+                      <span class="d-block text-dark">Writer</span>
+                  </h1>
+              </div>
+          </div>
+      </div>
+    </header>
+    <div class = "container">
+    <div class="card">
+      <!-- <img src="img.jpg" alt="John" style="width:100%"> -->
+      <div class="m-b-25 mx-auto"> <img class="mx-auto" id="profile-img" src="{{ user.profile.image.url }}" class="img-radius" alt="User-Profile-Image"> </div>
+
+      <h1 id="profile-h1" class="mx-auto">{{user.username|title}}</h1>
+      <p class="mx-auto">{{user.email}}</p>
+
+        <form action="" method="post" enctype="multipart/form-data" class="mx-auto">
+            {% csrf_token %}
+            <fieldset class="form-group" class="mx-auto">
+<!--                <legend class="border-bottom mb-4">Join Today</legend>-->
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+<!--            <div class="form-group">-->
+<!--                <button class="btn btn-outline-info" type="submit">Update Profile</button>-->
+<!--            </div>-->
+        </form>
+
+      <p class="mx-auto"><button id="btn-profile"><a href="{% url 'profile-update' %}" id="auth-links">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Update Profile
+    </a></button></p>
+    <form id="logoutForm" method="post" action="{% url 'logout' %}" style="display: none;">
+      {% csrf_token %}
+  </form>
+  <p class="mx-auto"><button type="button" onclick="document.getElementById('logoutForm').submit();" id="btn-profile" >
+      Logout
+  </button></p>
+    </div>
+    </div>
+
+{% endblock content %}

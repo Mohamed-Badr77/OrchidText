@@ -1,0 +1,123 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">Your favorite questions</span>
+                    <span class="d-block text-dark">and our answers to them</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="faq section-padding">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-8 col-12">
+                <h2>General Info.</h2>
+
+                <div class="accordion" id="accordionGeneral">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne" aria-expanded="true" aria-controls="accordionGeneralOne">
+                            What is this website?
+                            </button>
+                        </h2>
+
+                        <div id="accordionGeneralOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+
+                            <div class="accordion-body">
+                                <p class="large-paragraph"><strong>Orchid Texts</strong> is free website for everyone. It's purpose was a specific person, but it shall serve as a haven for all that wish to say something to someone.</p>
+
+                                <p class="large-paragraph">Feel free to create an account for your own <strong>Orchid Texts</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo" aria-expanded="false" aria-controls="accordionGeneralTwo">
+                            What are the rules for this website?
+                            </button>
+                        </h2>
+
+                        <div id="accordionGeneralTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+
+                            <div class="accordion-body">
+                                <p class="large-paragraph">Respect and good behavior are a must for <strong>Orchid Texts</strong>. It was not meant for hate but for love. All posts are moderated.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralThree" aria-expanded="false" aria-controls="accordionGeneralThree">
+                            How do I contact the creator?
+                            </button>
+                        </h2>
+
+                        <div id="accordionGeneralThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+
+                            <div class="accordion-body">
+                                <p class="large-paragraph">The website is still a work in progress, and it was made for the sake of one person. Any further changes will be decided later.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="mt-5">About <span>our texts</span></h2>
+
+                <div class="accordion" id="accordionProduct">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionProductOne" aria-expanded="true" aria-controls="accordionProductOne">
+                            What do I write an Orchid Text?
+                            </button>
+                        </h2>
+
+                        <div id="accordionProductOne" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionProduct">
+
+                            <div class="accordion-body">
+                                <p class="large-paragraph"><strong>Orchid Texts</strong> are your love and desire put into words. Try writing an orchid text and making your partner guess which one is yours!</p>
+
+                                <p class="large-paragraph">All posts are moderated, and no texts with hateful or inappropriate nuances will be tolerated.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionProductTwo" aria-expanded="false" aria-controls="accordionProductTwo">
+                            How do I use Orchid Text?
+                            </button>
+                        </h2>
+
+                        <div id="accordionProductTwo" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionProduct">
+
+                            <div class="accordion-body">
+                                <p class="large-paragraph">All you have to do to create your own <strong>Orchid Text</strong> is create an account. Once you do that, you would be able to create as many texts as you want.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock content %}

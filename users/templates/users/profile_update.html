@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+  
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">Orchid</span>
+                    <span class="d-block text-dark">Writer</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+  </header>
+  <br>
+  <br>
+  <div class = "container">
+    <div class="content-section">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Update Profile</legend>
+                {{ u_form|crispy }}
+                <br>
+                {{ p_form|crispy }}
+            </fieldset>
+            <br>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Update</button>
+                <button class="btn btn-outline-info" type="submit"><a href="{% url 'profile' %}">Go Back</a></button>
+
+            </div>
+
+        </form>
+        <br>
+        <br>
+
+    </div>
+</div>
+{% endblock content %}

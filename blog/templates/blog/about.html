@@ -1,0 +1,153 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<header class="site-header section-padding d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+  
+            <div class="col-lg-10 col-12">
+                <h1>
+                    <span class="d-block text-primary">About</span>
+                    <span class="d-block text-dark">The Orchid..</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+  </header>
+  <br>
+  <br>
+ 
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <h2 class="mb-5">The <span>Dream</span> Team</h2>
+                </div>
+
+                <div class="col-lg-6 mb-4 col-12">
+                    <div class="team-thumb d-flex align-items-center">
+                        <img src="{% static 'blog/images/people/LittleOrchid.jpg' %}" class="img-fluid custom-circle-image team-image me-4" alt="">
+
+                        <div class="team-info">
+                            <h5 class="mb-0">Orchid</h5>
+                            <strong class="text-muted">Her</strong>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#LittleOrchid">
+                              <i class="bi-plus-circle-fill"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4 col-12">
+                    <div class="team-thumb d-flex align-items-center">
+                        <img src="{% static 'blog/images/people/Puddin.png' %}" class="img-fluid custom-circle-image team-image me-4" alt="">
+
+                        <div class="team-info">
+                            <h5 class="mb-0">Puddin</h5>
+                            <strong class="text-muted">Him</strong>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#Puddin">
+                              <i class="bi-plus-circle-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class= "container">
+    <section class="testimonial section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-9 mx-auto col-11">
+                    <h2 class="text-center">An <span>Orchid's </span> words, <br> <span>Puddin's</span> command.</h2>
+
+                    <div class="slick-testimonial">
+                        <div class="slick-testimonial-caption">
+                            <p class="lead">The hands of an artist, very soft and caring and magical hands.</p>
+
+                            <div class="slick-testimonial-client d-flex align-items-center mt-4">
+                                <span>An <strong class="text-muted">Orchid</strong> once said..</span>
+                            </div>
+                        </div>
+                        <div class="slick-testimonial-caption">
+                            <p class="lead">I want a website, and I want to have access to that website..</p>
+
+                            <div class="slick-testimonial-client d-flex align-items-center mt-4">
+                                <span>An <strong class="text-muted">Orchid</strong> once said..</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="LittleOrchid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Orchid</h3>
+
+                        <h6 class="text-muted">Her</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Sometimes a princess, other times a soulmate, always an orchid.</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Being of superior taste and high aspirations, she always aims at the top. That would mean that the best is what she deserves. Like an Orchid, she deserves to be pampered.</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Time ticks and on the 15th, it was the beginning of her 23rd chapter in life. Here's to starting it strong..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+        
+    <div class="modal fade" id="Puddin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0">
+                <div class="modal-header flex-column">
+                    <h3 class="modal-title" id="exampleModalLabel">Puddin</h3>
+
+                    <h6 class="text-muted">Him</h6>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <h5 class="mb-4">Only one goal seems to be in his mind, her happiness. To that end, he exploits all available means.</h5>
+
+                    <div class="row mb-4">
+                        <div class="col-lg-6 col-12">
+                            <p>Living every day as what it is, he never expected to be tangled in the vines of an Orchid. But to make it worthwhile for both of them, he chose to go above and beyond.</p>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <p>Every moment of serenity like all altercations, it made him more certain that she's the one he wants to choose. And so he does, every day..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+   
+{% endblock content %}
